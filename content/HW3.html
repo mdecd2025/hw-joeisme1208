@@ -144,9 +144,34 @@ img.add_border {
         </header>
     <div id="tipue_search_content">HW2 << <a href='HW2.html'>Previous</a> <a href='Midterm.html'>Next</a> >> Midterm<br /><h1>HW3</h1>
 <p>HW3 (20%):<span style="background-color: #ffff00;">建立 Webots 桌上籃球遊戲機模擬系統</span></p>
-<p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW3 - 學員學號</p>
-<p></p>
-<br />HW2 << <a href='HW2.html'>Previous</a> <a href='Midterm.html'>Next</a> >> Midterm</div>
+<p>操作影片標題: <a href="https://youtu.be/B4S7JAiXeZ4">國立虎尾科技大學 - 機械設計工程系 - cd2025 HW3 - 41223130</a></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/B4S7JAiXeZ4" width="560"></iframe></p>
+<p><a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/41223130_nfu_edu_tw/ETataeGgLARJowDY6ivIAW0BPYdNl4dC2JeSS5km6K9Pfw?e=N1ybwg">建立 Webots 桌上籃球遊戲機模擬檔案</a></p>
+<p>模擬程式:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from controller import Robot
+
+def run_robot():
+    # Create the Robot instance
+    robot = Robot()
+
+    # Get simulation time step
+    timestep = int(robot.getBasicTimeStep())
+
+    # Get motor and keyboard devices
+    motor = robot.getDevice('motor1')
+    keyboard = robot.getKeyboard()
+    keyboard.enable(timestep)
+
+    # Set initial motor position
+    initial_position = 0.0  # Assuming initial position is 0
+
+    # Main control loop
+    while robot.step(timestep) != -1:
+        motor.setPosition(38 * 3.14159 / 180)
+
+if __name__ == "__main__":
+    run_robot()</pre>
+<p></p><br />HW2 << <a href='HW2.html'>Previous</a> <a href='Midterm.html'>Next</a> >> Midterm</div>
         
     <!-- footer -->
       <div class="container">
