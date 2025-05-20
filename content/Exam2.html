@@ -144,8 +144,34 @@ img.add_border {
         </header>
     <div id="tipue_search_content">Exam1 << <a href='Exam1.html'>Previous</a> <a href='Exam3.html'>Next</a> >> Exam3<br /><h1>Exam2</h1>
 <p>Exam2 (10%): 利用 CAD 零組件建立模擬場景</p>
-<p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam2 - 學員學號</p>
-<br />Exam1 << <a href='Exam1.html'>Previous</a> <a href='Exam3.html'>Next</a> >> Exam3</div>
+<p>操作影片標題: <a href="https://youtu.be/x8jYld8ppKA">國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam2 - 41223130</a></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/x8jYld8ppKA" width="560"></iframe></p>
+<p><img alt="" height="424" src="./../images/四連桿座標.png" width="800"/></p>
+<p><a href="https://nfuedu-my.sharepoint.com/:f:/g/personal/41223130_nfu_edu_tw/Eh3CWaWUXU5EklC_by_5prsBuJqeYtG-F82trNPg2FKXEA?e=sYcoed">利用CAD零組件建立模擬檔案</a></p>
+<p>模擬程式:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from controller import Robot
+
+def run_robot():
+    # Create the Robot instance
+    robot = Robot()
+
+    # Get simulation time step
+    timestep = int(robot.getBasicTimeStep())
+
+    # Get motor device
+    motor = robot.getDevice('motor')
+
+    # Set motor for continuous rotation
+    motor.setPosition(float('inf'))
+    motor.setVelocity(1.0)
+
+    # Main control loop
+    while robot.step(timestep) != -1:
+        pass
+
+if __name__ == "__main__":
+    run_robot()</pre>
+<p></p><br />Exam1 << <a href='Exam1.html'>Previous</a> <a href='Exam3.html'>Next</a> >> Exam3</div>
         
     <!-- footer -->
       <div class="container">
